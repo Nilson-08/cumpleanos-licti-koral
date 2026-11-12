@@ -80,6 +80,7 @@ function verificarCodigo() {
             "Código incorrecto. Inténtalo nuevamente 💗";
 
     }
+
 }
 
 
@@ -187,6 +188,7 @@ function configurarSorpresa(botonId, mensajeId, regaloBotonId, regaloId) {
             boton.textContent = "Ocultar sorpresa ❤️";
 
             crearCorazones("💗");
+            crearDecoraciones();
 
             mensaje.scrollIntoView({
                 behavior: "smooth",
@@ -221,6 +223,7 @@ function configurarSorpresa(botonId, mensajeId, regaloBotonId, regaloId) {
             botonRegalo.textContent = "Ocultar regalo 🎁";
 
             crearCorazones("💗");
+            crearDecoraciones();
 
             regalo.scrollIntoView({
                 behavior: "smooth",
@@ -291,6 +294,59 @@ function crearCorazones(simbolo) {
 
                 clearInterval(movimiento);
                 corazon.remove();
+
+            }
+
+        }, 30);
+
+    }
+
+}
+
+
+// ========================================
+// ANIMACION DE ESTRELLAS Y TORTAS
+// ========================================
+
+function crearDecoraciones() {
+
+    const simbolos = ["⭐", "🌟", "✨", "🎂", "🧁"];
+
+    for (let i = 0; i < 25; i++) {
+
+        const decoracion = document.createElement("span");
+
+        decoracion.textContent =
+            simbolos[Math.floor(Math.random() * simbolos.length)];
+
+        decoracion.style.position = "fixed";
+        decoracion.style.left = Math.random() * 100 + "vw";
+        decoracion.style.top = "-40px";
+        decoracion.style.fontSize = (20 + Math.random() * 20) + "px";
+        decoracion.style.zIndex = "100";
+        decoracion.style.pointerEvents = "none";
+        decoracion.style.transition = "none";
+
+        document.body.appendChild(decoracion);
+
+        let posicion = -40;
+        let horizontal = 0;
+
+        const movimiento = setInterval(function() {
+
+            posicion += 3;
+            horizontal += Math.sin(posicion / 30);
+
+            decoracion.style.top = posicion + "px";
+
+            decoracion.style.transform =
+                "translateX(" + horizontal + "px) rotate(" +
+                posicion + "deg)";
+
+            if (posicion > window.innerHeight) {
+
+                clearInterval(movimiento);
+                decoracion.remove();
 
             }
 

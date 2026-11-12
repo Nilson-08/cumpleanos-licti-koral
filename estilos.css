@@ -1,0 +1,251 @@
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #f8a5c2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: aparecer 1s ease;
+}
+
+.selector, .pagina-licti {
+    background: white;
+}
+
+.pagina-koral {
+    background: #faf5ff;
+    border: 3px solid #c4a1ee;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #e75480;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #d63384;
+}
+
+h3 {
+    color: #e75480;
+    margin: 20px 0;
+}
+
+.introduccion {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+button {
+    background: #e75480;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.boton-licti {
+    background: #e75480;
+}
+
+.boton-koral {
+    background: #9060c9;
+}
+
+.pastel {
+    font-size: 90px;
+    margin: 20px;
+    animation: flotar 2s infinite ease-in-out;
+}
+
+.carta {
+    text-align: justify;
+    line-height: 1.9;
+    color: #555;
+    margin-top: 20px;
+}
+
+.carta p {
+    margin-bottom: 20px;
+}
+
+.despedida {
+    color: #d63384;
+}
+
+.zona-regalo {
+    margin-top: 35px;
+    padding: 25px;
+    background: #fff0f5;
+    border-radius: 20px;
+}
+
+.regalo-icono {
+    font-size: 90px;
+    margin: 20px;
+    animation: flotar 2s infinite ease-in-out;
+}
+
+.codigo {
+    background: white;
+    border: 2px dashed #e75480;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #d63384;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.volver {
+    display: block;
+    margin-bottom: 25px;
+    background: #888;
+}
+
+/* DISEÑO EXCLUSIVO DE KORAL */
+
+.pagina-koral h1,
+.pagina-koral h2,
+.pagina-koral h3 {
+    color: #8050b5;
+}
+
+.pagina-koral button {
+    background: #9060c9;
+}
+
+.pagina-koral .zona-regalo {
+    background: #eee3fa;
+}
+
+.pagina-koral .despedida {
+    color: #8050b5;
+}
+
+.pagina-koral .codigo {
+    border-color: #9060c9;
+    color: #8050b5;
+}
+
+.oculto {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+    animation: aparecer 1s ease;
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor {
+        padding: 25px 18px;
+    }
+
+    .opciones {
+        flex-direction: column;
+    }
+
+    .opciones button {
+        width: 100%;
+    }
+}
+
+/* PANTALLA DEL CODIGO SECRETO */
+
+#pantallaCodigo {
+    padding: 40px 30px;
+    border-radius: 25px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: aparecer 1s ease;
+}
+
+#codigoIngresado {
+    width: 90%;
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px solid #f8a5c2;
+    border-radius: 15px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+#errorCodigo {
+    color: #e75480;
+    margin: 10px;
+    font-weight: bold;
+}
+
+#pantallaCodigo .volver {
+    background: #888;
+}
+

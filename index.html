@@ -1,0 +1,300 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una sorpresa especial ❤️</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE SELECCION -->
+
+    <div id="selector" class="selector contenedor">
+
+        <h1>🎂 ¡Bienvenida!</h1>
+        <p>Primero, dime quién eres:</p>
+
+        <button id="elegirLicti" class="boton-licti">
+            Soy Licti 💗
+        </button>
+
+        <button id="elegirKoral" class="boton-koral">
+            Soy Koral 💜
+        </button>
+
+    </div>
+
+    <!-- PANTALLA PARA INGRESAR EL CODIGO -->
+
+    <div id="pantallaCodigo" class="selector contenedor oculto">
+
+        <h1>🔐 Código secreto</h1>
+
+        <p>Ingresa el código que te enviaron para abrir tu sorpresa. 💌</p>
+
+        <input
+            type="0506"
+            id="codigoIngresado"
+            placeholder="Escribe tu código aquí"
+        >
+
+        <button onclick="verificarCodigo()">Entrar ❤️</button>
+
+        <p id="errorCodigo"></p>
+
+        <button class="volver" onclick="volverInicio()">
+            ← Volver
+        </button>
+
+    </div>
+
+    <!-- AQUI CONTINUA TU PAGINA ORIGINAL DE LICTI -->
+
+
+
+    <!-- CUMPLEAÑOS DE LICTI -->
+
+    <div id="paginaLicti" class="contenedor pagina-licti oculto">
+
+        <button class="volver" onclick="volverInicio()">
+            ← Volver
+        </button>
+
+        <h1>🎂 ¡Feliz Cumpleaños! 🎂</h1>
+
+        <h2>
+            Lictilaptosada mas conocida como Ster Ismaislyn ❤️🎂
+        </h2>
+
+        <p class="introduccion">
+            Hoy es un día muy especial y quiero dedicarte algo bonito
+            y algunas palabras de mi parte por este día.
+        </p>
+
+        <div class="pastel">🎂</div>
+
+        <button id="botonSorpresaLicti">
+            Abre mi sorpresa 💌
+        </button>
+
+        <div id="mensajeLicti" class="oculto">
+
+            <h2>¡Un mensaje de todo corazón de Kanon! 💗</h2>
+
+            <div class="carta">
+
+                <p>
+                    Feliz cumpleaños, hoy es un día muy especial porque
+                    celebramos tus 16 añitos. ❤️🎂 No sabes lo feliz que
+                    me hace poder felicitarte y ser parte, aunque sea un
+                    poquito, de esta etapa tan bonita de tu vida.
+                    Parece increíble que ya hayan pasado 4 años desde
+                    que comenzó nuestra amistad. Cinco años en los que
+                    hemos compartido momentos, risas, conversaciones y
+                    recuerdos que, sinceramente, guardo con mucho cariño.
+                    Quizás no siempre te lo diga o no encuentre las
+                    palabras adecuadas para expresarlo, pero quiero que
+                    sepas que eres una persona muy especial para mí y
+                    que te tengo un aprecio enorme.
+                </p>
+
+                <p>
+                    Quiero que nunca olvides que no estás sola y que,
+                    así como puedo estar contigo en tus momentos de
+                    felicidad, también quiero estar cuando tengas días
+                    difíciles, cuando sientas que las cosas no salen
+                    como esperabas, cuando necesites desahogarte o
+                    simplemente cuando no tengas ganas de hablar y
+                    necesites a alguien que te acompañe. No tienes que
+                    fingir estar bien conmigo ni guardarte lo que sientes.
+                    Siempre tendrás a alguien dispuesto a escucharte,
+                    apoyarte y recordarte lo valiosa que eres.
+                </p>
+
+                <p>
+                    No importa cuánto tiempo pase, cuántas cosas cambien
+                    o qué caminos tome la vida, espero que nunca pierdas
+                    la confianza de contar conmigo. No te prometo que
+                    siempre tendré las palabras perfectas para solucionar
+                    tus problemas, pero sí puedo prometerte que siempre
+                    tendrás mi apoyo, mi amistad y mis ganas de verte bien.
+                    Porque para mí una amistad no consiste solamente en
+                    estar cuando todo es bonito, sino también en quedarse
+                    cuando las cosas se ponen difíciles.
+                </p>
+
+                <p>
+                    De corazón, deseo que esta nueva etapa de tus 16 años
+                    esté llena de momentos hermosos, nuevas experiencias,
+                    sueños cumplidos y personas que te quieran tanto como
+                    mereces. Nunca dejes que los malos momentos te hagan
+                    olvidar lo increíble que eres. Sigue siendo tú,
+                    sigue sonriendo y nunca dejes de luchar por aquello
+                    que te hace feliz.
+                </p>
+
+                <p>
+                    Gracias por estos 4 años de amistad, por cada recuerdo
+                    y por formar parte de mi vida. Tal vez no sepa qué nos
+                    espera en el futuro, pero sí sé que valoro muchísimo
+                    haberte conocido y que me siento agradecido por tener
+                    una amistad como la tuya. Ojalá podamos seguir sumando
+                    muchos años más, creando recuerdos y acompañándonos
+                    en cada etapa de nuestras vidas.
+                </p>
+
+                <p class="despedida">
+                    <strong>
+                        Feliz cumpleaños, disfruta muchísimo tus 16 años.
+                        Nunca dudes de lo mucho que te aprecio y recuerda
+                        que aquí tienes a alguien que siempre va a querer
+                        verte feliz. Te quiero mucho y espero que la vida
+                        te dé todo lo bonito que mereces. ❤️🥹
+                    </strong>
+                </p>
+
+            </div>
+
+            <h3>¡Disfruta muchísimo tu día! 🎀</h3>
+
+            <div class="zona-regalo">
+                <p>Pero espera... todavía tengo algo más para ti. 🥹</p>
+
+                <button id="botonRegaloLicti">
+                    Abrir regalo 🎁
+                </button>
+            </div>
+
+            <div id="regaloLicti" class="oculto">
+
+                <h2>¡No es mucho, pero espero que te guste! 🎁</h2>
+
+                <div class="regalo-icono">🎁💗</div>
+
+                <p>
+                    Esta es una pequeña sorpresa que preparé
+                    especialmente para ti.
+                </p>
+
+                <h3>Un pequeño detalle de Kanon para Ster ❤️</h3>
+
+                <div class="codigo">
+                    AQUÍ COLOCA TU CÓDIGO
+                </div>
+
+                <h2>¡Feliz cumpleaños, Ster! 🎂</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CUMPLEAÑOS DE KORAL -->
+
+    <div id="paginaKoral" class="contenedor pagina-koral oculto">
+
+        <button class="volver" onclick="volverInicio()">
+            ← Volver
+        </button>
+
+        <h1>💜 ¡Feliz Cumpleaños! 💜</h1>
+
+        <h2>Para Koral ✨</h2>
+
+        <p class="introduccion">
+            Hoy es tu día y también tengo una sorpresa
+            preparada especialmente para ti.
+        </p>
+
+        <div class="pastel">🎂</div>
+
+        <button id="botonSorpresaKoral">
+            Descubre tu sorpresa 💜
+        </button>
+
+        <div id="mensajeKoral" class="oculto">
+
+            <h2>¡Un mensaje especial para Koral! 💜</h2>
+
+            <div class="carta">
+
+                <p>
+                    ¡Feliz cumpleaños, Koral! 🎂💜
+
+                    Hoy quiero desearte un día lleno de alegría,
+                    sonrisas y momentos que puedas guardar siempre
+                    en tu corazón.
+                </p>
+
+                <p>
+                    Espero que esta nueva etapa esté llena de nuevas
+                    experiencias, sueños cumplidos y muchas razones
+                    para sonreír. Que nunca te falten personas que
+                    te apoyen, te valoren y quieran verte feliz.
+                </p>
+
+                <p>
+                    Quiero que sepas que te aprecio mucho y que
+                    agradezco tener la oportunidad de dedicarte
+                    estas palabras. Espero que disfrutes muchísimo
+                    tu día y que recibas todo el cariño que mereces.
+                </p>
+
+                <p class="despedida">
+                    <strong>
+                        ¡Feliz cumpleaños, Koral! Que todos tus deseos
+                        se hagan realidad y que nunca pierdas esa
+                        alegría que te hace especial. 💜🥹
+                    </strong>
+                </p>
+
+            </div>
+
+            <h3>¡Este día es para ti! 💜</h3>
+
+            <div class="zona-regalo">
+                <p>Y todavía hay otra sorpresa esperándote... ✨</p>
+
+                <button id="botonRegaloKoral">
+                    Abrir regalo 🎁
+                </button>
+            </div>
+
+            <div id="regaloKoral" class="oculto">
+
+                <h2>¡Una sorpresa para ti, Koral! 💜</h2>
+
+                <div class="regalo-icono">🎁💜</div>
+
+                <p>
+                    Preparé este pequeño detalle especialmente para ti.
+                    Espero que te guste.
+                </p>
+
+                <h3>Con mucho aprecio, Kanon 💜</h3>
+
+                <div class="codigo">
+                    AQUÍ COLOCA EL REGALO DE KORAL
+                </div>
+
+                <h2>¡Feliz cumpleaños! 🎂</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

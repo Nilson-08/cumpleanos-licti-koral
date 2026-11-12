@@ -187,7 +187,9 @@ function configurarSorpresa(botonId, mensajeId, regaloBotonId, regaloId) {
 
             boton.textContent = "Ocultar sorpresa ❤️";
 
-            crearCorazones("💗");
+            crearCorazones(
+    personaSeleccionada === "Koral" ? "💜" : "💗"
+);
             crearDecoraciones();
 
             mensaje.scrollIntoView({
@@ -222,7 +224,9 @@ function configurarSorpresa(botonId, mensajeId, regaloBotonId, regaloId) {
 
             botonRegalo.textContent = "Ocultar regalo 🎁";
 
-            crearCorazones("💗");
+            crearCorazones(
+    personaSeleccionada === "Koral" ? "💜" : "💗"
+);
             crearDecoraciones();
 
             regalo.scrollIntoView({
@@ -304,15 +308,16 @@ function crearCorazones(simbolo) {
 }
 
 
+
 // ========================================
 // ANIMACION DE ESTRELLAS Y TORTAS
 // ========================================
 
 function crearDecoraciones() {
 
-    const simbolos = ["⭐", "🌟", "✨", "🎂", "🧁"];
+    const simbolos = ["⭐", "🌟", "✨", "🎂", "🧁", "🎉"];
 
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 35; i++) {
 
         const decoracion = document.createElement("span");
 
@@ -320,37 +325,38 @@ function crearDecoraciones() {
             simbolos[Math.floor(Math.random() * simbolos.length)];
 
         decoracion.style.position = "fixed";
-        decoracion.style.left = Math.random() * 100 + "vw";
-        decoracion.style.top = "-40px";
-        decoracion.style.fontSize = (20 + Math.random() * 20) + "px";
-        decoracion.style.zIndex = "100";
+        decoracion.style.left = Math.random() * 95 + "vw";
+        decoracion.style.top = "-50px";
+        decoracion.style.fontSize = (25 + Math.random() * 25) + "px";
+        decoracion.style.zIndex = "999999";
         decoracion.style.pointerEvents = "none";
-        decoracion.style.transition = "none";
+        decoracion.style.display = "block";
 
         document.body.appendChild(decoracion);
 
-        let posicion = -40;
-        let horizontal = 0;
+        const duracion = 4000 + Math.random() * 3000;
 
-        const movimiento = setInterval(function() {
-
-            posicion += 3;
-            horizontal += Math.sin(posicion / 30);
-
-            decoracion.style.top = posicion + "px";
-
-            decoracion.style.transform =
-                "translateX(" + horizontal + "px) rotate(" +
-                posicion + "deg)";
-
-            if (posicion > window.innerHeight) {
-
-                clearInterval(movimiento);
-                decoracion.remove();
-
+        decoracion.animate(
+            [
+                {
+                    transform: "translateY(0) rotate(0deg)",
+                    opacity: 1
+                },
+                {
+                    transform: "translateY(110vh) rotate(360deg)",
+                    opacity: 0.8
+                }
+            ],
+            {
+                duration: duracion,
+                easing: "linear",
+                fill: "forwards"
             }
+        );
 
-        }, 30);
+        setTimeout(function() {
+            decoracion.remove();
+        }, duracion);
 
     }
 
